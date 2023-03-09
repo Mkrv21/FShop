@@ -1,0 +1,66 @@
+﻿<Window x:Class="FShop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FShop"
+        mc:Ignorable="d"
+        Title="Autorization" Height="950" Width="1350" WindowState="Maximized">
+    
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\1\Pictures\впкс-курсач (цветочный)\FShop\FShop\Resources\5609849.jpg"></ImageBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="450"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="450"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="200"/>
+            <RowDefinition/>
+            <RowDefinition Height="200"/>
+        </Grid.RowDefinitions>
+
+
+        <Image Grid.Column="0" Grid.Row="0" Source="C:\Users\1\Pictures\впкс-курсач (цветочный)\FShop\FShop\Resources\mdi.png" Width="113" HorizontalAlignment="Left" VerticalAlignment="Center" Height="92" Margin="10,0,0,0" />
+
+
+        <Label Content="FlowersForLovers" Grid.Column="1" HorizontalAlignment="Center" FontSize="50" FontFamily="Malgun Gothic Semilight" FontWeight="Normal" Height="88"  Width="400" VerticalAlignment="Center" />
+
+        <Border MinWidth="150" Background="White" MaxHeight="450" Padding="30,30,30,30" MaxWidth="400" MinHeight="100" CornerRadius="20"  Grid.Column="1" Margin="0,198,0,7" Grid.RowSpan="2"  >
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" />
+            </Border.Effect>
+            <StackPanel >
+                <Label Content="LOGIN" FontFamily="Malgun Gothic Semilight" FontSize="30" HorizontalAlignment="Center"/>
+                <Border BorderThickness="1" BorderBrush="#acb0af" CornerRadius="5" Margin="5 5">
+                    <Grid Margin="5 5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock x:Name="Log" Text="Login" Style="{DynamicResource textHint}" FontFamily="Malgun Gothic Semilight" MouseDown="Log_MouseDown" FontSize="36"/>
+                        <TextBox  Style="{DynamicResource textbox}" x:Name="Log_ent" TextChanged="Log_ent_TextChanged" FontFamily="Malgun Gothic Semilight"/>
+                        </Grid>
+                </Border>
+                <Border BorderThickness="1" BorderBrush="#acb0af" CornerRadius="5" Margin="5 5" >
+                    <Grid Margin="5 5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock x:Name="Pass" Text="Password" Style="{DynamicResource textHint}" FontFamily="Malgun Gothic Semilight" MouseDown="Pass_MouseDown" FontSize="36"/>
+                        <PasswordBox Style="{DynamicResource textbox}" x:Name="Pass_ent" FontFamily="Malgun Gothic Semilight" PasswordChanged="Pass_ent_PasswordChanged"/>
+                    </Grid>
+                </Border>
+                <TextBlock Margin="0,0,0,20" HorizontalAlignment="Right" Width="250" FontFamily="Magneto" FontSize="25"><Hyperlink NavigateUri="page2.xaml" Foreground="#B8895B" FontFamily="Malgun Gothic Semilight" Click="Hyperlink_Click_1" Cursor="Hand">Forgot your password?</Hyperlink></TextBlock>
+                <Button x:Name="button_login" Style="{DynamicResource mainbutton}" Width="234" Content="Log In" Height="81" FontSize="36" Margin="0,0,0,20" Click="button_login_Click"/>
+                <TextBlock HorizontalAlignment="Center" FontSize="25">New User? <Hyperlink NavigateUri="Registration.xaml" Foreground="#B8895B" FontFamily="Malgun Gothic Semilight" Click="Hyperlink_Click">Sign Up Here</Hyperlink></TextBlock>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
